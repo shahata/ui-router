@@ -1,7 +1,7 @@
 describe('uiView', function () {
   'use strict';
 
-  beforeEach(module('ui.router'));
+  beforeEach(module('fork.ui.router'));
 
   describe('scrollIntoView', function () {
     var elem;

@@ -49,4 +49,4 @@ function $ViewScrollProvider() {
   }];
 }
 
-angular.module('ui.router.state').provider('$uiViewScroll', $ViewScrollProvider);
+angular.module('fork.ui.router.state').provider('$uiViewScroll', $ViewScrollProvider);

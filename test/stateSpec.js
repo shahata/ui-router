@@ -2,7 +2,7 @@ describe('state', function () {
 
   var stateProvider, locationProvider, templateParams, ctrlName;
 
-  beforeEach(module('ui.router', function($locationProvider) {
+  beforeEach(module('fork.ui.router', function($locationProvider) {
     locationProvider = $locationProvider;
     $locationProvider.html5Mode(false);
   }));
@@ -158,7 +158,7 @@ describe('state', function () {
       });
       $q.flush();
       expect($location.search()).toEqual({term: 'hello'});
-      expect(called).toBeFalsy();        
+      expect(called).toBeFalsy();
     }));
 
     it('ignores non-applicable state parameters', inject(function ($state, $q) {
@@ -643,7 +643,7 @@ describe('state', function () {
       expect($state.href("about.person", { person: "bob" })).toEqual("#/about/bob");
       expect($state.href("about.person.item", { person: "bob", id: null })).toEqual("#/about/bob/");
     }));
-    
+
     it('generates absolute url when absolute is true', inject(function ($state) {
       expect($state.href("about.sidebar", null, { absolute: true })).toEqual("http://server/#/about");
       locationProvider.html5Mode(true);
@@ -963,14 +963,14 @@ describe('state', function () {
 });
 
 describe('state queue', function(){
-  angular.module('ui.router.queue.test', ['ui.router.queue.test.dependency'])
+  angular.module('fork.ui.router.queue.test', ['fork.ui.router.queue.test.dependency'])
     .config(function($stateProvider) {
       $stateProvider
         .state('queue-test-a', {})
         .state('queue-test-b-child', { parent: 'queue-test-b' })
         .state('queue-test-b', {});
     });
-  angular.module('ui.router.queue.test.dependency', [])
+  angular.module('fork.ui.router.queue.test.dependency', [])
     .config(function($stateProvider) {
       $stateProvider
         .state('queue-test-a.child', {})
@@ -979,7 +979,7 @@ describe('state queue', function(){
   var expectedStates = ['','queue-test-a', 'queue-test-a.child', 'queue-test-b', 'queue-test-b-child'];
 
   it('should work across modules', function() {
-    module('ui.router.queue.test', 'ui.router.queue.test.dependency');
+    module('fork.ui.router.queue.test', 'fork.ui.router.queue.test.dependency');
 
     inject(function ($state) {
       var list = $state.get().sort(function(a, b) { return (a.name > b.name) - (b.name > a.name); });
@@ -988,7 +988,7 @@ describe('state queue', function(){
   });
 
   it('should work when parent is name string', function() {
-    module('ui.router.queue.test', 'ui.router.queue.test.dependency');
+    module('fork.ui.router.queue.test', 'fork.ui.router.queue.test.dependency');
 
     inject(function ($state) {
       var list = $state.get().sort(function(a, b) { return (a.name > b.name) - (b.name > a.name); });

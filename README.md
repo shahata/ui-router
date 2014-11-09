@@ -34,7 +34,7 @@ States are bound to *named*, *nested* and *parallel views*, allowing you to powe
 
 **(2)** Include `angular-ui-router.js` (or `angular-ui-router.min.js`) in your `index.html`, after including Angular itself (For Component users: ignore this step)
 
-**(3)** Add `'ui.router'` to your main module's list of dependencies (For Component users: replace `'ui.router'` with `require('angular-ui-router')`)
+**(3)** Add `'fork.ui.router'` to your main module's list of dependencies (For Component users: replace `'fork.ui.router'` with `require('angular-ui-router')`)
 
 When you're done, your setup should look similar to the following:
 
@@ -46,7 +46,7 @@ When you're done, your setup should look similar to the following:
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
     <script src="js/angular-ui-router.min.js"></script>
     <script>
-        var myApp = angular.module('myApp', ['ui.router']);
+        var myApp = angular.module('myApp', ['fork.ui.router']);
         // For Component users, it should look like this:
         // var myApp = angular.module('myApp', [require('angular-ui-router')]);
     </script>

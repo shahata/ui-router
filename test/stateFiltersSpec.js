@@ -1,5 +1,5 @@
 describe('isState filter', function() {
-  beforeEach(module('ui.router'));
+  beforeEach(module('fork.ui.router'));
   beforeEach(module(function($stateProvider) {
     $stateProvider
       .state('a', { url: '/' })
@@ -20,7 +20,7 @@ describe('isState filter', function() {
 });
 
 describe('includedByState filter', function() {
-  beforeEach(module('ui.router'));
+  beforeEach(module('fork.ui.router'));
   beforeEach(module(function($stateProvider) {
     $stateProvider
       .state('a', { url: '/' })

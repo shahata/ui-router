@@ -7,7 +7,7 @@ describe('uiView', function () {
   var scope, $compile, elem;
 
   beforeEach(function() {
-    var depends = ['ui.router'];
+    var depends = ['fork.ui.router'];
 
     try {
       angular.module('ngAnimate');
@@ -17,8 +17,8 @@ describe('uiView', function () {
       module('mock.animate');
     }
 
-    angular.module('ui.router.test', depends);
-    module('ui.router.test');
+    angular.module('fork.ui.router.test', depends);
+    module('fork.ui.router.test');
   });
 
   beforeEach(module(function ($provide) {

@@ -173,12 +173,12 @@ function filterByKeys(keys, values) {
  * in your angular app (use {@link ui.router} module instead).
  *
  */
-angular.module('ui.router.util', ['ng']);
+angular.module('fork.ui.router.util', ['ng']);
 
 /**
  * @ngdoc overview
  * @name ui.router.router
- * 
+ *
  * @requires ui.router.util
  *
  * @description
@@ -187,12 +187,12 @@ angular.module('ui.router.util', ['ng']);
  * This module is a dependency of other sub-modules. Do not include this module as a dependency
  * in your angular app (use {@link ui.router} module instead).
  */
-angular.module('ui.router.router', ['ui.router.util']);
+angular.module('fork.ui.router.router', ['fork.ui.router.util']);
 
 /**
  * @ngdoc overview
  * @name ui.router.state
- * 
+ *
  * @requires ui.router.router
  * @requires ui.router.util
  *
@@ -201,9 +201,9 @@ angular.module('ui.router.router', ['ui.router.util']);
  *
  * This module is a dependency of the main ui.router module. Do not include this module as a dependency
  * in your angular app (use {@link ui.router} module instead).
- * 
+ *
  */
-angular.module('ui.router.state', ['ui.router.router', 'ui.router.util']);
+angular.module('fork.ui.router.state', ['fork.ui.router.router', 'fork.ui.router.util']);
 
 /**
  * @ngdoc overview
@@ -213,17 +213,17 @@ angular.module('ui.router.state', ['ui.router.router', 'ui.router.util']);
  *
  * @description
  * # ui.router
- * 
- * ## The main module for ui.router 
+ *
+ * ## The main module for ui.router
  * There are several sub-modules included with the ui.router module, however only this module is needed
- * as a dependency within your angular app. The other modules are for organization purposes. 
+ * as a dependency within your angular app. The other modules are for organization purposes.
  *
  * The modules are:
  * * ui.router - the main "umbrella" module
- * * ui.router.router - 
- * 
+ * * ui.router.router -
+ *
  * *You'll need to include **only** this module as the dependency within your angular app.*
- * 
+ *
  * <pre>
  * <!doctype html>
  * <html ng-app="myApp">
@@ -232,8 +232,8 @@ angular.module('ui.router.state', ['ui.router.router', 'ui.router.util']);
  *   <!-- Include the ui-router script -->
  *   <script src="js/angular-ui-router.min.js"></script>
  *   <script>
- *     // ...and add 'ui.router' as a dependency
- *     var myApp = angular.module('myApp', ['ui.router']);
+ *     // ...and add 'fork.ui.router' as a dependency
+ *     var myApp = angular.module('myApp', ['fork.ui.router']);
  *   </script>
  * </head>
  * <body>
@@ -241,6 +241,6 @@ angular.module('ui.router.state', ['ui.router.router', 'ui.router.util']);
  * </html>
  * </pre>
  */
-angular.module('ui.router', ['ui.router.state']);
+angular.module('fork.ui.router', ['fork.ui.router.state']);
 
-angular.module('ui.router.compat', ['ui.router']);
+angular.module('fork.ui.router.compat', ['fork.ui.router']);

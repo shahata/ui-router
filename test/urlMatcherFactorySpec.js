@@ -127,10 +127,10 @@ describe("UrlMatcher", function () {
 });
 
 describe("urlMatcherFactory", function () {
-  
+
   var $umf;
 
-  beforeEach(module('ui.router.util'));
+  beforeEach(module('fork.ui.router.util'));
   beforeEach(inject(function($urlMatcherFactory) {
     $umf = $urlMatcherFactory;
   }));
@@ -149,7 +149,7 @@ describe("urlMatcherFactory", function () {
   });
 
   it("should handle case insensistive URL", function () {
-  	$umf.caseInsensitiveMatch(true);
+    $umf.caseInsensitiveMatch(true);
     expect($umf.compile('/hello/world').exec('/heLLo/WORLD')).toEqual({});
   });
 });

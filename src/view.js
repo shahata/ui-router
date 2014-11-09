@@ -68,4 +68,4 @@ function $ViewProvider() {
   }
 }
 
-angular.module('ui.router.state').provider('$view', $ViewProvider);
+angular.module('fork.ui.router.state').provider('$view', $ViewProvider);

@@ -30,6 +30,6 @@ function $IncludedByStateFilter($state) {
   };
 }
 
-angular.module('ui.router.state')
+angular.module('fork.ui.router.state')
   .filter('isState', $IsStateFilter)
   .filter('includedByState', $IncludedByStateFilter);

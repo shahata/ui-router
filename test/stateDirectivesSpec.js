@@ -2,7 +2,7 @@ describe('uiStateRef', function() {
 
   var el, template, scope, document;
 
-  beforeEach(module('ui.router'));
+  beforeEach(module('fork.ui.router'));
 
   beforeEach(module(function($stateProvider) {
     $stateProvider.state('index', {
@@ -126,7 +126,7 @@ describe('uiStateRef', function() {
         ctrlKey:  undefined,
         shiftKey: undefined,
         altKey:   undefined,
-        button:   undefined 
+        button:   undefined
       });
       $timeout.flush();
       $q.flush();
@@ -288,7 +288,7 @@ describe('uiStateRef', function() {
 describe('uiSrefActive', function() {
     var el, template, scope, document;
 
-  beforeEach(module('ui.router'));
+  beforeEach(module('fork.ui.router'));
 
   beforeEach(module(function($stateProvider) {
     $stateProvider.state('index', {
