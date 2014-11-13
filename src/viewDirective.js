@@ -228,7 +228,7 @@ function $ViewDirective(   $state,   $injector,   $uiViewScroll) {
             cleanupLastView();
           });
 
-          latestLocals = $state.$current.locals[clone.data('$uiViewName')];
+          latestLocals = $state.$current.locals && $state.$current.locals[clone.data('$uiViewName')];
 
           currentEl = clone;
           currentScope = newScope;
@@ -270,7 +270,7 @@ function $ViewDirectiveFill ($compile, $controller, $state) {
         $element.data('$uiViewName', name);
 
         var current = $state.$current,
-            locals  = current && current.locals[name];
+            locals  = current && current.locals && current.locals[name];
 
         if (! locals) {
           return;
